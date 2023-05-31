@@ -23,12 +23,29 @@ namespace pryNeptuno_FerMoya
         {
             objClaseBD.ConectarBD();
             objClaseBD.CargarCmb(cmbPais);
+            objClaseBD.CargarCmbProd(cmbCodigo);
 
         }
 
         private void cmbPais_SelectedIndexChanged(object sender, EventArgs e)
         {
             objClaseBD.CargarCmb(cmbCiudad, cmbPais.Text);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbPais_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            objClaseBD.CargarCmb(cmbCiudad, cmbPais.Text);
+
         }
     }
 }

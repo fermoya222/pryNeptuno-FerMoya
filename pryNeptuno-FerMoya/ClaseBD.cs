@@ -74,5 +74,22 @@ namespace pryNeptuno_FerMoya
             reader.Close();
         }
 
+        public void CargarCmbProd(ComboBox cmb)
+        {
+            command.Connection = connection;
+            command.CommandType = System.Data.CommandType.TableDirect;
+            command.CommandText = "Pedidos";
+
+            reader = command.ExecuteReader();
+
+            cmb.Items.Clear();
+
+            while (reader.Read())
+            {
+                cmb.Items.Add(reader[0].ToString());
+            }
+
+            reader.Close();
+        }
     }
 }
